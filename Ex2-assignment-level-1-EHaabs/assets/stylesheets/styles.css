@@ -64,11 +64,22 @@ Modular Classes
 --------------------------------------------------------------- */
 .flex {
   display: flex;
-  justify-content: space-between;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.flex-end {
+    justify-content: flex-end;
+}
+
+.center {
+    justify-content: center;
 }
 
 .container {
-    max-width: 125ch;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 30px;
 }
@@ -81,6 +92,15 @@ Modular Classes
     color: var(--Tertiary-Color);
 }
 
+.row {
+    flex-direction: row;
+}
+
+.column {
+    flex-direction: column;
+}
+
+
 .btn {
     color: white;
     background-color: var(--Tertiary-Color);
@@ -91,6 +111,10 @@ Modular Classes
 
 .wrap {
     flex-wrap: wrap;
+}
+
+.section-padding {
+    padding: 50px 0;
 }
 
 img {
@@ -105,6 +129,10 @@ header {
     background-color: #222946;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+.logo, header nav {
+    flex-basis: 400px;
 }
 
 .logo img {
@@ -135,8 +163,24 @@ Hero
     flex-wrap: wrap;
 }
 
-.hero-text {
+.hero .container {
 
+}
+
+.hero-text > * {
+    margin-top: 20px;
+}
+
+.col-40 {
+    flex-basis: 35%;
+}
+
+.col-60 {
+    flex-basis: 55%;
+}
+
+.hero img {
+    width: 80%;
 }
 
 /* ---------------------------------------------------------------
@@ -167,14 +211,16 @@ footer {
     font-size: var(--font-size-1up);
 }
 
-footer nav a {
-    color: var(--Secondary-Color);
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 700;
+footer p, footer nav {
+    flex-basis: 400px;
+}
+
+footer nav ul {
+    justify-content: flex-end;
 }
 
 footer nav li {
+    display: inline-block;
     margin-right: 20px;
 }
 
@@ -182,6 +228,12 @@ footer nav li:last-child {
     margin-right: 0;
 }
 
+footer nav a {
+    color: var(--Secondary-Color);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 
 /* ---------------------------------------------------------------
 Media Queries
@@ -189,15 +241,12 @@ Media Queries
 
 /* Small devices (tablets, 768px and up) */
 @media (max-width: 768px) {
+    header .container {
+        justify-content: center;
+        align-items: center;
+        background-color: brown;
+    }
     .blog-card {
         flex-basis: 100%;
     }
-}
-
-/* ---------------------------------------------------------------
-Testing
---------------------------------------------------------------- */
-
-*:hover {
-    border: 3px solid goldenrod;
 }
