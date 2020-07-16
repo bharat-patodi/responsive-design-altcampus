@@ -19,15 +19,6 @@ Variables
     --Primary-Font: 'Roboto';
     --Secondary-Font: 'Lato';
     /* Font Values End */
-
-    /* Font Sizes Begin */
-    --font-size-2down: 0.8em;
-    --font-size-1down: 0.9em;
-    --font-base-size: 16px;
-    --font-size-1up: 1.2em;
-    --font-size-2up: 1.4em;
-    --font-size-3up: 1.6em;
-    /* Font Sizes End */
 }
 
 /* ---------------------------------------------------------------
@@ -49,15 +40,15 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 3rem;
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 h3 {
-  font-size: 1.6em;
+  font-size: 1.6rem;
 }
 
 label, input {
@@ -86,7 +77,7 @@ Modular Classes
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 0 2rem;
 }
 
 .align-items {
@@ -118,7 +109,7 @@ Modular Classes
 }
 
 .section-padding {
-    padding: 50px 0;
+    padding: 3rem 0;
 }
 
 img {
@@ -131,8 +122,8 @@ Header
 
 header {
     background-color: #222946;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
 }
 
 .logo, header nav {
@@ -140,7 +131,7 @@ header {
 }
 
 .logo img {
-    width: 50px;
+    width: 3rem;
 }
 
 header nav a {
@@ -151,7 +142,7 @@ header nav a {
 }
 
 header nav li {
-    margin-right: 10px;
+    margin-right: 0.6rem;
 }
 
 header nav li:last-child {
@@ -172,7 +163,7 @@ Hero
 }
 
 .hero-text > * {
-    margin-top: 20px;
+    margin-top: 1.5rem;
 }
 
 .col-40 {
@@ -201,7 +192,7 @@ Our Blog
 
 .blog-card {
     flex-basis: 30%;
-    margin-bottom: 30px;
+    margin-bottom: 2rem;
 }
 
 .blog-card img {
@@ -210,11 +201,11 @@ Our Blog
 
 .our-blog h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 1.5rem;
 }
 
 .our-blog h2, .blog-card > * {
-    margin-bottom: 20px;
+    margin-bottom: 1.5rem;
 
 }
 
@@ -224,8 +215,8 @@ Footer
 
 footer {
     background-color: #222946;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
     color: var(--Secondary-Color);
     font-size: var(--font-size-1up);
 }
@@ -240,7 +231,7 @@ footer nav ul {
 
 footer nav li {
     display: inline-block;
-    margin-right: 20px;
+    margin-right: 1.5rem;
 }
 
 footer nav li:last-child {
