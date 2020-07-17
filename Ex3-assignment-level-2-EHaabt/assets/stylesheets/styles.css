@@ -1,7 +1,5 @@
 /* Remember to design Mobile First */
-/* LVHAF = link styling order */
-/* Ensure to include a:focus back if it is reset.*/
-
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap');
 /* ---------------------------------------------------------------
 CSS Reset (minified)
 --------------------------------------------------------------- */
@@ -18,22 +16,22 @@ Variables
 
 :root {
   /* Colors Begin */
-  --Primary-Color: #ffc600;
-  --Secondary-Color: #001f3f;
+  --Primary-Color: #dfecff;
+  --Secondary-Color: #f9234d;
+  --Tertiary-Color: #23347b;
   /* Colors End */
 
   /* Font Values Begin */
-  --Primary-Font: 'Roboto';
-  --Secondary-Font: 'Lato';
+  --Primary-Font: 'Balsamiq Sans';
   /* Font Values End */
 
   /* Font Sizes Begin */
-  --font-size-2down: 0.8em;
-  --font-size-1down: 0.9em;
+  --font-size-2down: 0.8rem;
+  --font-size-1down: 0.9rem;
   --font-base-size: 16px;
-  --font-size-1up: 1.2em;
-  --font-size-2up: 1.4em;
-  --font-size-3up: 1.6em;
+  --font-size-1up: 1.2rem;
+  --font-size-2up: 1.4rem;
+  --font-size-3up: 1.6rem;
   /* Font Sizes End */
 
 }
@@ -43,6 +41,7 @@ My Base Styles
 --------------------------------------------------------------- */
 
 body {
+  font-family: 'Balsamiq Sans', cursive;
   font-size: 16px;
   line-height: 1.5;
   margin: 0 auto;
@@ -69,17 +68,69 @@ Modular Classes
 --------------------------------------------------------------- */
 .flex {
   display: flex;
+  align-items: center;
 }
 
 .container {
-  max-width: 100ch;
+  max-width: 125ch;
   margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+.btn {
+  text-decoration: none;
+  color: white;
+  padding: 0.4em 2em;
+  background-color: var(--Secondary-Color);
+  border-radius: 0.25em;
+}
+
+/* ---------------------------------------------------------------
+Header
+--------------------------------------------------------------- */
+
+.header {
+  background-color: green;
+  color: white;
+}
+
+.header__logo {
+  font-size: 1.6rem;
+}
+
+.header__nav {
+  flex: 2;
+}
+
+.header__nav__ul {
+  justify-content: flex-end;
+}
+
+.header__nav-item {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  margin-right: 0.8rem;
+}
+
+.header__nav__ul li:last-child {
+  margin-right: 2.5rem;
+}
+
+.header__nav-item__link {
+  color: white;
+  text-decoration: none;
 }
 
 
-/* ---------------------------------------------------------------
-Project Specific Styles
---------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
 
 
 
