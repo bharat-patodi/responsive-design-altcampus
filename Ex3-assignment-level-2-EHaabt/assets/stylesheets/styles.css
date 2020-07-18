@@ -25,15 +25,6 @@ Variables
   --Primary-Font: 'Balsamiq Sans';
   /* Font Values End */
 
-  /* Font Sizes Begin */
-  --font-size-2down: 0.8rem;
-  --font-size-1down: 0.9rem;
-  --font-base-size: 16px;
-  --font-size-1up: 1.2rem;
-  --font-size-2up: 1.4rem;
-  --font-size-3up: 1.6rem;
-  /* Font Sizes End */
-
 }
 
 /* ---------------------------------------------------------------
@@ -42,21 +33,31 @@ My Base Styles
 
 body {
   font-family: 'Balsamiq Sans', cursive;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
   margin: 0 auto;
 }
 
+h1, h2, h3, h4 {
+  text-transform: capitalize;
+}
+
+
 h1 {
-  font-size: 1.6em;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 2.5rem 0;
 }
 
 h2 {
-  font-size: 1.4em;
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin: 1rem 0;
 }
 
 h3 {
-  font-size: 1.2em;
+  font-size: 1.6rem;
+  font-weight: 700;
 }
 
 label, input {
@@ -78,6 +79,7 @@ Modular Classes
 }
 
 .btn {
+  display: inline-block;
   text-decoration: none;
   color: white;
   padding: 0.4em 2em;
@@ -85,17 +87,30 @@ Modular Classes
   border-radius: 0.25em;
 }
 
+.highlight {
+  color: var(--Secondary-Color);
+}
+
+.section-padding {
+  padding: 2rem 0;
+}
+
 /* ---------------------------------------------------------------
 Header
 --------------------------------------------------------------- */
 
 .header {
-  background-color: green;
   color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* bottom: 0; */
 }
 
 .header__logo {
-  font-size: 1.6rem;
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 .header__nav {
@@ -107,9 +122,9 @@ Header
 }
 
 .header__nav-item {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   text-transform: uppercase;
-  margin-right: 0.8rem;
+  margin-right: 1.2rem;
 }
 
 .header__nav__ul li:last-child {
@@ -121,17 +136,163 @@ Header
   text-decoration: none;
 }
 
+/* ---------------------------------------------------------------
+Hero
+--------------------------------------------------------------- */
 
+.hero {
+  background-color: rgba(0, 0, 255, 0.6);
+  background-image: linear-gradient(rgba(0, 0, 255, 0.6), rgba(0, 0, 255, 0.6)), url(../images/01.png);
+  padding-top: 6rem;
+  color: white;
+}
 
+.hero__text {
+  padding-right: 10rem;
+}
 
+.hero__text__para {
+  margin: 1rem 0;
+}
 
+.hero__img {
+  width: 75%;
+}
 
+.hero__img img {
+  width: 100%;
+  display: block;
+}
 
+/* ---------------------------------------------------------------
+About Event
+--------------------------------------------------------------- */
 
+.about-event {
+  padding: 2rem 0;
+}
 
+.about-event__text {
+  margin-left: 5rem;
+}
 
+.about-event__text__title {
+  text-transform: uppercase;
+}
 
+.about-event__text__para {
+  margin: 1rem 0;
+}
 
+/* ---------------------------------------------------------------
+Why Join
+--------------------------------------------------------------- */
+
+.why-join {
+  background-color: var(--Primary-Color);
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+.why-join__heading {
+  margin-bottom: 3rem;
+}
+
+.why-join__cards {
+  justify-content: space-between;
+}
+
+.why-join__card {
+  border: 3px dashed var(--Secondary-Color);
+  flex-basis: 375px;
+  text-align: left;
+  padding: 1rem;
+}
+
+.why-join__card__heading {
+
+}
+
+.why-join__card__para {
+
+}
+
+/* ---------------------------------------------------------------
+Schedule
+--------------------------------------------------------------- */
+
+.schedule {
+
+}
+
+.schedule__heading {
+  text-align: center;
+}
+
+.schedule__cards {
+}
+
+.schedule__card {
+  justify-content: space-between;
+}
+
+.schedule__card > * {
+  margin-right: 3rem;
+}
+
+.schedule__card > *:last-child {
+  margin-right: 0;
+}
+
+.six-sept-card {
+
+}
+
+.seven-sept-card {
+
+}
+
+.eight-sept-card {
+
+}
+
+.nine-sept-card {
+
+}
+
+.schedule__card__heading {
+  border: 3px dashed var(--Secondary-Color);
+  font-size: 2rem;
+  /* width: 8rem; */
+  height: 8rem;
+  border-radius: 50%;
+  flex-basis: 8rem;
+  text-align: center;
+}
+
+.schedule__card__img {
+  width: 100%;
+  flex-basis: 200px;
+}
+
+.schedule__card__img img {
+  width: 100%;
+  display: block;
+  border-radius: 0.7rem;
+}
+
+.schedule__card__text {
+flex-basis: 700px;
+}
+
+.schedule__card__text__title {
+  font-size: 2rem;
+
+}
+
+.schedule__card__text__para {
+
+}
 
 
 /* ---------------------------------------------------------------
