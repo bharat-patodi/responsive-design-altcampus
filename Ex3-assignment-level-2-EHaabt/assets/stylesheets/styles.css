@@ -70,6 +70,8 @@ Modular Classes
 .flex {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .container {
@@ -154,6 +156,7 @@ Hero
 
 .hero__text {
   padding-right: 10rem;
+  flex-basis: 60%;
 }
 
 .hero__text__para {
@@ -161,12 +164,15 @@ Hero
 }
 
 .hero__img {
-  width: 75%;
+  text-align: right;
+  width: 30%;
+  min-width: 300px;
 }
 
 .hero__img img {
   width: 100%;
   display: block;
+  min-width: 300px;
 }
 
 /* ---------------------------------------------------------------
@@ -177,8 +183,19 @@ About Event
   padding: 2rem 0;
 }
 
+.about-event__img {
+  flex-basis: 400px;
+  flex-grow: 1;
+}
+
+.about-event__img img {
+  min-width: 400px;
+}
+
 .about-event__text {
-  margin-left: 5rem;
+  flex-basis: 400px;
+  flex-grow: 1;
+  /* margin-left: 5rem; */
 }
 
 .about-event__text__title {
@@ -220,6 +237,10 @@ Why Join
 
 .why-join__card__para {
 
+}
+
+.why-join__btn {
+  display: none;
 }
 
 /* ---------------------------------------------------------------
@@ -324,10 +345,12 @@ Features
   text-align: center;
   border-radius: 0.5rem;
   padding: 1rem 0;
+  max-width: 250px;
 }
 
 .feature-list-item__img {
-  width: 25%;
+  /* max-width: 250px; */
+  width: 50%;
 }
 
 .feature-list-item__heading {
@@ -435,6 +458,10 @@ Footer
   flex-grow: 1;
 }
 
+.footer__navbar__qwk-lnks ul {
+  justify-content: flex-start;
+}
+
 .footer__navbar__qwk-lnks li {
   margin-right: 1rem;
 }
@@ -477,15 +504,121 @@ Footer
   padding: 1rem 0;
 }
 
+.footer__credits a {
+  font-size: 0.9rem;
+}
+
 /* ---------------------------------------------------------------
 Media Queries
 --------------------------------------------------------------- */
 
 /* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) {}
+@media (max-width: 768px) {
+  /* Header Section */
+  .header .container {
+    flex-direction: column;
+  }
 
-/* Medium devices (desktops, 992px and up) */
-@media (min-width: 992px) {}
+  .header__nav-item__link {
+    font-size: 0.9rem;
+  }
 
-/* Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {}
+  .header__btn {
+    display: none;
+  }
+
+  /* Hero Section */
+  .hero {
+    text-align: center;
+  }
+
+  .hero__img {
+    order: -1;
+    margin: 3rem auto 0 auto;
+  }
+
+  .hero__text {
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  /* About Section */
+  .about-event__img {
+    text-align: center;
+    border: 3px solid green;
+    margin: 0 auto;
+
+  }
+
+  .about-event__img img {
+    display: block;
+    width: 100px;
+    margin: 0 auto;
+  }
+
+  .about-event__text {
+    text-align: center;
+  }
+
+  /* Why Join Section */
+  .why-join__card {
+    margin-top: 1rem;
+    margin: 1rem auto;
+  }
+
+  .why-join__btn {
+    display: inline-block;
+    margin-top: 2rem;
+  }
+
+  /* Schedule Section */
+  .schedule__card {
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 4px var(--Secondary-Color);
+  }
+
+  .schedule__card > * {
+    margin: 1rem auto;
+  }
+
+  /* Feaure Section */
+  .feature-list-item {
+    margin: 2rem auto;
+    /* border: 3px solid var(--Secondary-Color); */
+    box-shadow: 0px 0px 8px black;
+  }
+
+  /* Event Video Section */
+  .event-video iframe {
+    width: 80%;
+    height: 315px;
+  }
+
+  /* News Section */
+  .news-articles {
+  }
+
+  .news__article {
+    box-shadow: 0px 0px 8px black;
+    margin: 2rem auto;
+  }
+
+  .news__article > *:not(img) {
+    padding: 10px;
+  }
+
+  /* Footer Section */
+  .footer {
+    text-align: center;
+  }
+
+  .footer__navbar__qwk-lnks {
+    margin-top: 1rem;
+  }
+
+  .footer__navbar__social-media {
+    margin-top: 1rem;
+    text-align: center;
+  }
+}
