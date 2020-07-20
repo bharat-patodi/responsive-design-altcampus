@@ -42,7 +42,6 @@ h1, h2, h3, h4 {
   text-transform: capitalize;
 }
 
-
 h1 {
   font-size: 2.5rem;
   font-weight: 700;
@@ -87,6 +86,7 @@ Modular Classes
   padding: 0.4em 2em;
   background-color: var(--Secondary-Color);
   border-radius: 0.25em;
+  box-shadow: 0 0 8px black;
 }
 
 .active {
@@ -116,6 +116,8 @@ Header
 }
 
 .header__logo {
+  text-decoration: none;
+  color:white;
   font-size: 2rem;
   font-weight: 700;
 }
@@ -202,7 +204,7 @@ About Event
 }
 
 .about-event__img img {
-  min-width: 400px;
+  min-width: 300px;
 }
 
 .about-event__text {
@@ -285,20 +287,13 @@ Schedule
   margin-right: 0;
 }
 
-.six-sept-card .schedule__card__heading {
-}
+.six-sept-card .schedule__card__heading {}
 
-.seven-sept-card {
+.seven-sept-card {}
 
-}
+.eight-sept-card {}
 
-.eight-sept-card {
-
-}
-
-.nine-sept-card {
-
-}
+.nine-sept-card {}
 
 .schedule__card__heading {
   border: 3px dashed var(--Secondary-Color);
@@ -309,6 +304,10 @@ Schedule
   flex-basis: 8rem;
   text-align: center;
   /* line-height: 8rem; */
+  /* vertical-align: middle; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .schedule__card__img {
@@ -381,11 +380,25 @@ Event Video
 --------------------------------------------------------------- */
 
 .event-video {
-  text-align: center;
-  padding: 2rem 0;
+  padding: 4rem;
+}
+
+.event-video .container {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative;
+  /* margin: 2rem; */
 }
 
 .event-video .iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
   border-radius: 1rem;
   /* width: 100%;
   height: auto; */
@@ -566,6 +579,7 @@ Media Queries
     bottom: 0;
     padding-top: 120px;
     z-index: 0;
+    color: goldenrod;
   }
 
   label[for="dropdown"], .header__logo  {
@@ -606,7 +620,7 @@ Media Queries
   #dropdown:checked ~ .header__logo {
     /* display: inline-block; */
     /* position: fixed; */
-
+    /* z-index: 2; */
   }
 
   #dropdown:checked ~ .header__nav {
@@ -617,7 +631,7 @@ Media Queries
     display: inline-block;
     z-index: 2;
     position: fixed;
-    bottom: 5rem;
+    bottom: 20rem;
   }
   /* Hero Section */
   .hero {
@@ -637,7 +651,6 @@ Media Queries
   /* About Section */
   .about-event__img {
     text-align: center;
-    border: 3px solid green;
     margin: 0 auto;
   }
 
@@ -682,8 +695,8 @@ Media Queries
 
   /* Event Video Section */
   .event-video iframe {
-    width: 80%;
-    height: 315px;
+    /* width: 80%;
+    height: 315px; */
   }
 
   /* News Section */
@@ -693,6 +706,10 @@ Media Queries
   .news__article {
     box-shadow: 0px 0px 8px black;
     margin: 2rem auto;
+  }
+
+  .news__article__link {
+    margin-top: 0;
   }
 
   .news__article > *:not(img) {

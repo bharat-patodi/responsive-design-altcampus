@@ -9,9 +9,10 @@
 <body>
     <header class="header">
         <div class="container flex">
-            <div class="logo header__logo">
-                <p>Alt Events</p>
+            <div class="logo">
+                <a href="#" class="header__logo">Alt Events</a>
             </div>
+            <!-- Hamburger -->
             <label for="dropdown"><i class="fas fa-hamburger"></i></label>
             <input type="checkbox" name="" class="header__dropdown" id="dropdown">
             <nav class="header__nav">
@@ -149,8 +150,10 @@
         </section>
         <section class="event-video container">
             <!-- TODO: How to style iframe objects -->
-            <iframe class="iframe" width="560" height="315" src="https://www.youtube.com/embed/rwFiFWI23Rw" frameborder="0"
+            <div class="container">
+                <iframe class="iframe" width="100%" height="315" src="https://www.youtube.com/embed/rwFiFWI23Rw" frameborder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
         </section>
         <section class="news">
             <div class="container">
