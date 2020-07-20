@@ -579,7 +579,6 @@ Media Queries
     bottom: 0;
     padding-top: 120px;
     z-index: 0;
-    color: goldenrod;
   }
 
   label[for="dropdown"], .header__logo  {
@@ -591,6 +590,7 @@ Media Queries
     justify-content: center;
   }
 
+  color: goldenrod;
   .header__nav-item__link {
     margin: 0;
     color: var(--Secondary-Color);
