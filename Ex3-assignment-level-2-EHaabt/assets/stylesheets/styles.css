@@ -143,6 +143,19 @@ Header
   text-decoration: none;
 }
 
+/* Hamburger styling Begin */
+.header__dropdown {
+  display: none;
+}
+
+label[for="dropdown"] {
+  display: none;
+}
+
+/* Hamburger styling End */
+
+
+
 /* ---------------------------------------------------------------
 Hero
 --------------------------------------------------------------- */
@@ -527,7 +540,7 @@ Footer
 Media Queries
 --------------------------------------------------------------- */
 
-/* Small devices (tablets, 768px and up) */
+/* Small devices (tablets, 768px and down) */
 @media (max-width: 768px) {
   /* Header Section */
   .header .container {
@@ -542,6 +555,70 @@ Media Queries
     display: none;
   }
 
+  /* Hamburger */
+  .header__nav {
+    display: none;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 120px;
+    z-index: 0;
+  }
+
+  label[for="dropdown"], .header__logo  {
+    z-index: 2;
+  }
+
+  .header__nav__ul {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .header__nav-item__link {
+    margin: 0;
+    color: var(--Secondary-Color);
+    font-weight: 700;
+  }
+
+  .header__nav-item__link:hover {
+    color: var(--Primary-Color);
+  }
+
+  .header__nav-item {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    margin-right: 0;
+    margin: 0.5rem 2rem;
+  }
+
+  .header__nav__ul li:last-child {
+    margin-right: 2rem;
+  }
+
+  label[for="dropdown"] {
+    display: inline-block;
+  }
+
+  /* Can we select a sibling that was declared before? */
+  #dropdown:checked ~ .header__logo {
+    /* display: inline-block; */
+    /* position: fixed; */
+
+  }
+
+  #dropdown:checked ~ .header__nav {
+    display: inline-block;
+  }
+
+  #dropdown:checked ~ .header__btn {
+    display: inline-block;
+    z-index: 2;
+    position: fixed;
+    bottom: 5rem;
+  }
   /* Hero Section */
   .hero {
     text-align: center;
@@ -562,7 +639,6 @@ Media Queries
     text-align: center;
     border: 3px solid green;
     margin: 0 auto;
-
   }
 
   .about-event__img img {
