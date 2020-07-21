@@ -24,8 +24,8 @@ Variables
   /* Font Values Begin */
   --Primary-Font: 'Balsamiq Sans';
   /* Font Values End */
-
 }
+
 
 /* ---------------------------------------------------------------
 My Base Styles
@@ -239,7 +239,19 @@ Why Join
   justify-content: space-between;
 }
 
+.why_join__card__number {
+  font-size: 1.8rem;
+  position: absolute;
+  top: -2.2rem;
+  left: 2rem;
+  background-color: var(--Primary-Color);
+  padding: 0.5rem;
+  color: var(--Secondary-Color);
+  font-weight: 700;
+}
+
 .why-join__card {
+  position: relative;
   border: 3px dashed var(--Secondary-Color);
   flex-basis: 375px;
   text-align: left;
@@ -287,7 +299,9 @@ Schedule
   margin-right: 0;
 }
 
-.six-sept-card .schedule__card__heading {}
+.six-sept-card .schedule__card__heading {
+  color: white;
+}
 
 .seven-sept-card {}
 
@@ -308,6 +322,7 @@ Schedule
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--Secondary-Color);
 }
 
 .schedule__card__img {
@@ -590,7 +605,6 @@ Media Queries
     justify-content: center;
   }
 
-  color: goldenrod;
   .header__nav-item__link {
     margin: 0;
     color: var(--Secondary-Color);
@@ -617,14 +631,17 @@ Media Queries
   }
 
   /* Can we select a sibling that was declared before? */
-  #dropdown:checked ~ .header__logo {
-    /* display: inline-block; */
-    /* position: fixed; */
-    /* z-index: 2; */
+  .header .logo {
+    z-index: 3;
   }
 
   #dropdown:checked ~ .header__nav {
     display: inline-block;
+  }
+
+  #dropdown:checked ~ .fa-hamburger {
+    /* Why isn't this propagating? */
+    color: goldenrod;
   }
 
   #dropdown:checked ~ .header__btn {
